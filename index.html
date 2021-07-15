@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>handmade</title>
+
+    <link href="css/all.min.css" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/bootstrap-select.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
+    <!--    <link href="css/styleRTL.css" rel="stylesheet" />   -->
+
+</head>
+<body>
+
+<!--start form-->
+<div class="delegateBlock">
+    <div class="container" >
+        <img src="img/logo.png" alt="logo" class="logo">
+        <form action="completeDelegate.html">
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="name" placeholder="الاسم الثلاثي" >
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="id" placeholder="رقم الهوية الوطنية" >
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="nationality" placeholder="الجنسية" >
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="ServLocation" disabled placeholder="الموقع">
+                <a class="locImg" data-toggle="modal" data-target="#exampleModalCenter">
+                    <i class="fas fa-map-marker-alt"></i>
+                </a>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content p-0">
+                        <div class="modal-body p-0">
+                            <div id="map"></div>
+                            <input type="hidden" name="latitude" id="latitude">
+                            <input type="hidden" name="longitude" id="longitude">
+                            <div class="searchCont">
+                                <input id="searchTextField" type="text" placeholder="ابحث عن موقعك">
+                                <span class="icon-search"></span>
+                            </div>
+
+                            <a class="semonBtn getLoc mx-auto" data-dismiss="modal">حفظ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="tel" class="form-control" id="phone" placeholder="رقم الجوال" >
+            </div>
+
+            <div class="form-group">
+                <input type="email" class="form-control" id="email" placeholder="البريد الالكتروني" >
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control docPhoto" placeholder="الصورة الشخصية" disabled>
+                <input id="photo-upload" class="uploadFile" name='upload_cont_file' type="file" accept="image/*">
+                <i class="fas fa-camera-retro"></i>
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control docPhoto" placeholder="صورة الهوية" disabled>
+                <input id="photo-upload2" class="uploadFile" name='upload_cont_file' type="file" accept="image/*">
+                <i class="fas fa-camera-retro"></i>
+            </div>
+
+            <label class="mb-3" style="align-self: flex-start">التاريخ الميلادي</label>
+            <div class="dateContainer">
+                <div class="form-group">
+                    <select class="selectpicker" id="day" title="يوم">
+                        <option>1</option>
+                        <option>2</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="selectpicker" id="month" title="شهر">
+                        <option>يناير</option>
+                        <option>فبراير</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="selectpicker" id="year" title="سنة">
+                        <option>1995</option>
+                        <option>1996</option>
+                    </select>
+                </div>
+            </div>
+
+            <label class="mb-3" style="align-self: flex-start">التاريخ الهجري</label>
+            <div class="dateContainer">
+                <div class="form-group">
+                    <select class="selectpicker" id="day2" title="يوم">
+                        <option>1</option>
+                        <option>2</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="selectpicker" id="month2" title="شهر">
+                        <option>يناير</option>
+                        <option>فبراير</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="selectpicker" id="year2" title="سنة">
+                        <option>1995</option>
+                        <option>1996</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="password" class="form-control" id="password" placeholder="كلمة المرور" >
+            </div>
+
+            <div class="form-group">
+                <input type="password" class="form-control" id="confirmPassword" placeholder="تأكيد كلمة المرور" >
+            </div>
+
+            <label class="mb-3" style="align-self: flex-start">نوع المستخدم</label>
+
+            <div class="d-flex align-items-center w-100 mb-4">
+                <div class="custom-control custom-radio ml-5">
+                    <input type="radio" id="male" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="male">ذكر</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="female" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="female">انثي</label>
+                </div>
+            </div>
+
+            <p><span>--</span> يجب ان تكون الصورة لك واضحة بدون نظارات شمسية وتظهر كامل الوجه</p>
+            <p><span>--</span> الاسم الثلاثي لك كما هو ظاهر بالهوية</p>
+            <p><span>*</span> مع العلم انه لن يتم النظر لأي طلب لا يحقق شروط الاعلان</p>
+
+
+            <button type="submit" class="semonBtn">
+                التالي
+            </button>
+        </form>
+    </div>
+</div>
+<!--start form-->
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.min.js"></script>
+<script src="js/scripts.js"></script>
+
+<!--start select-->
+<script>
+    $('.selectpicker').selectpicker();
+</script>
+<!--end select-->
+
+<!--start map-->
+<script>
+    function initMap() {
+        // if (navigator.geolocation) {
+        //     navigator.geolocation.getCurrentPosition(function (p) {
+        // var  lat = p.coords.latitude ;
+        // var  lng = p.coords.longitude;
+        var  lat = 31.13323 ;
+        var  lng = 31.21344;
+        const myLatlng = {
+            lat: lat,
+            lng: lng
+        };
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 10,
+            center: myLatlng,
+            mapTypeControl: false,
+            streetViewControl: false,
+        });
+        $('#latitude').val(lat)
+        $('#longitude').val(lng)
+        var input = document.getElementById('searchTextField');
+        var autocomplete = new google.maps.places.Autocomplete(input);
+        const geocoder = new google.maps.Geocoder();
+        document.getElementById("searchTextField").addEventListener("keyup", () => {
+            geocodeAddress(geocoder, map);
+        });
+        document.getElementById("searchTextField").addEventListener("change", () => {
+            geocodeAddress(geocoder, map);
+        });
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(lat, lng),
+            map: map,
+            title: 'Set lat/lon values for this property',
+            streetViewControl: false,
+            // draggable: true,
+            icon: {
+                url: 'img/location.svg',
+            },
+        });
+
+        //     });
+        // }
+    }
+
+    function geocodeAddress(geocoder, resultsMap) {
+        const address = document.getElementById("searchTextField").value;
+        geocoder.geocode({ address: address }, (results, status) => {
+            if (status === "OK") {
+                $('#latitude').val(results[0].geometry.location.lat())
+                $('#longitude').val(results[0].geometry.location.lng())
+                resultsMap.setCenter(results[0].geometry.location);
+                new google.maps.Marker({
+                    zoom: 4,
+                    map: resultsMap,
+                    position: results[0].geometry.location,
+                    streetViewControl: false,
+                });
+            } else {
+                // alert("Geocode was not successful for the following reason: " + status);
+            }
+        });
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDqUJp5NG7f4wHZIThgvqYdd7r9Lq5PcU&callback=initMap&libraries=places&language='{{lang()}}'" type="text/javascript"></script>
+<!--end map-->
+<script>
+    $(document).ready(function () {
+        $("#searchTextField").bind("keypress", function (e) {
+            if (e.keyCode == 13) {
+                return false;
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,449 @@
+/* start common style*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* colors */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #adabab;
+}
+
+.pac-container {
+  z-index: 2000 !important;
+}
+
+.h40 {
+  height: 40px !important;
+}
+
+.btn:hover, .btn:focus, .btn.focus {
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.modal {
+  overflow-y: auto;
+}
+
+a, button {
+  transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form label {
+  color: #7e8082;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+form .form-group {
+  margin-bottom: 40px;
+  position: relative;
+  width: 100%;
+}
+form .form-group .locImg {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  z-index: 1;
+  font-size: 18px;
+}
+form .form-group .locImg .fa-map-marker-alt {
+  color: #7e8082;
+}
+form .form-group .form-control {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 50px;
+  outline: none;
+  color: #7e8082;
+  font-size: 17px;
+  background: none;
+  border: 1px solid #adabab;
+  padding: 0 25px;
+  border-radius: 0;
+}
+form .form-group .form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #A05C50;
+}
+form .form-group .form-control:focus ~ .inputBorder::after, form .form-group .form-control:focus ~ .inputBorder::before {
+  width: 50%;
+}
+form .form-group .uploadFile {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 1;
+}
+form .form-group .fa-camera-retro {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  font-size: 18px;
+  color: #7e8082;
+}
+form p {
+  color: #7e8082;
+  font-size: 17px;
+  width: 100%;
+}
+form p span {
+  color: #A05C50;
+}
+form .terms {
+  margin-bottom: 20px;
+}
+form .terms a {
+  color: #7e8082;
+  font-size: 17px;
+  text-decoration: underline;
+}
+form .login {
+  color: #A05C50;
+  font-size: 17px;
+  margin-top: 20px;
+}
+form .dateContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+form .dateContainer .form-group {
+  flex: 0.32;
+}
+form .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn), form .bootstrap-select > .dropdown-toggle {
+  height: 50px;
+  border-radius: 0;
+  width: 100%;
+  color: #adabab;
+  font-size: 17px;
+  background: none;
+  border: 1px solid #adabab;
+}
+form .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > .dropdown-toggle.bs-placeholder, form .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > .dropdown-toggle.bs-placeholder:active, form .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > .dropdown-toggle.bs-placeholder:focus,
+form .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > .dropdown-toggle.bs-placeholder:hover, form .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder, form .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder:active, form .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder:focus,
+form .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder:hover {
+  border-radius: 0;
+  border: 0;
+}
+form .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .filter-option, form .bootstrap-select > .dropdown-toggle .filter-option {
+  text-align: right;
+  display: flex;
+  align-items: center;
+}
+form .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu li a, form .bootstrap-select > .dropdown-toggle .dropdown-menu li a {
+  text-align: right;
+}
+
+.searchCont {
+  position: absolute;
+  top: 25px;
+  left: 35px;
+}
+.searchCont #searchTextField {
+  border: 0;
+  height: 40px;
+  border-radius: 20px;
+  padding: 10px 15px 10px 30px;
+  width: 270px;
+  font-size: 15px;
+  color: #7e8082;
+  outline: 0;
+}
+.searchCont #searchTextField:focus {
+  outline: 0;
+}
+.searchCont .icon-search {
+  color: #7e8082;
+  left: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+textarea {
+  resize: none;
+  height: auto !important;
+}
+
+:placeholder-shown::-webkit-input-placeholder {
+  opacity: 1;
+  color: #adabab;
+}
+
+.modal-content {
+  border-radius: 0;
+  padding: 5px 15px;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.toggleOpacity {
+  opacity: 1 !important;
+}
+
+.mr-18 {
+  margin-right: 18px;
+}
+
+.mr-27 {
+  margin-right: 27px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.semonBtn {
+  background-color: #A05C50;
+  color: #fff;
+  border: 1px solid transparent;
+  transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  padding: 5px 0;
+  width: 165px;
+  justify-content: center;
+  font-size: 16px;
+  height: 45px;
+  font-weight: bold;
+  -webkit-box-shadow: 0 0 14px 0 rgba(255, 255, 255, 0.25);
+  -moz-box-shadow: 0 0 14px 0 rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 14px 0 rgba(255, 255, 255, 0.25);
+}
+.semonBtn:hover {
+  border-color: #A05C50;
+  background-color: #fff;
+  color: #A05C50;
+}
+.semonBtn.getLoc {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-bottom: 25px;
+}
+
+.custom-radio, .custom-checkbox {
+  padding-left: 0;
+  padding-right: 1.5rem;
+}
+.custom-radio .custom-control-input:checked ~ .custom-control-label::before, .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  color: #adabab;
+  border-color: #adabab;
+  background-color: #adabab;
+}
+.custom-radio .custom-control-label::before, .custom-checkbox .custom-control-label::before {
+  right: -1.5rem;
+  border-color: #adabab;
+  background-color: #fff;
+}
+.custom-radio .custom-control-label::after, .custom-checkbox .custom-control-label::after {
+  right: -1.5rem;
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  color: #A05C50;
+  border-color: #A05C50;
+  background-color: #A05C50;
+}
+.custom-checkbox .custom-control-label::before {
+  border-color: #A05C50;
+  background-color: #fff;
+}
+
+/* end common style*/
+body {
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+  direction: rtl;
+  text-align: right;
+}
+
+/* start homeModals */
+.modal .modal-dialog {
+  max-width: 60%;
+}
+.modal .modal-dialog .modal-content {
+  border: 0;
+}
+.modal .modal-dialog .modal-content .modal-header {
+  background: #A05C50;
+  border-radius: 0;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal .modal-dialog .modal-content .modal-header h5 {
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+}
+.modal .modal-dialog .modal-content .modal-header .closeModal {
+  color: #fff;
+  position: absolute;
+  left: 24px;
+  top: 20px;
+}
+.modal .modal-dialog .modal-content .modal-header .closeModal i {
+  font-size: 23px;
+}
+.modal .modal-dialog .modal-content .modal-body #map {
+  height: 500px;
+  width: 100%;
+}
+.modal .modal-dialog .modal-content .modal-body .absoluteBtn {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* end homeModals */
+/* start delegateBlock */
+.delegateBlock {
+  min-height: 100vh;
+  background: url(../img/bg_login.png) no-repeat center center;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  padding: 40px 0;
+}
+.delegateBlock .logo {
+  width: 90px;
+  margin: 0 auto 50px;
+  display: block;
+}
+
+/* end delegateBlock */
+/* Start Media Query */
+@media (max-width: 767px) {
+  .semonBtn {
+    font-size: 15px;
+    height: 40px;
+  }
+
+  .modal .modal-dialog {
+    max-width: 100%;
+  }
+  .modal .modal-dialog .modal-content .modal-header {
+    height: 60px;
+  }
+  .modal .modal-dialog .modal-content .modal-header h5 {
+    font-size: 16px;
+  }
+  .modal .modal-dialog .modal-content .modal-header .closeModal i {
+    font-size: 18px;
+  }
+  .modal .modal-dialog .modal-content .modal-body #map {
+    height: 400px;
+  }
+  .modal .modal-dialog .modal-content .modal-body .absoluteBtn {
+    bottom: 20px;
+  }
+  .modal .modal-dialog .modal-content .modal-body .custom-radio, .modal .modal-dialog .modal-content .modal-body .custom-checkbox {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+
+  form .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn), form .bootstrap-select > .dropdown-toggle {
+    height: 45px;
+    font-size: 15px;
+  }
+  form label {
+    font-size: 14px;
+  }
+  form .form-group {
+    margin-bottom: 30px;
+  }
+  form .form-group .form-control {
+    height: 45px;
+    padding: 0 10px 0 27px;
+    font-size: 13px;
+  }
+  form .form-group .locImg, form .form-group .fa-camera-retro {
+    left: 10px;
+    font-size: 15px;
+  }
+  form p {
+    color: #7e8082;
+    font-size: 15px;
+    width: 100%;
+  }
+  form .terms a {
+    font-size: 15px;
+  }
+  form .login {
+    font-size: 15px;
+  }
+
+  .searchCont {
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 75%;
+  }
+  .searchCont #searchTextField {
+    height: 35px;
+    width: 100%;
+    font-size: 14px;
+  }
+}
+/*Small Screen*/
+/*Medium Screen*/
+/*Larger Screen*/
+/* End Media Query */
+
+/*# sourceMappingURL=style.css.map */

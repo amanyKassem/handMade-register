@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>handmade</title>
+
+    <link href="css/all.min.css" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/bootstrap-select.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
+    <!--    <link href="css/styleRTL.css" rel="stylesheet" />   -->
+
+</head>
+<body>
+
+<!--start form-->
+<div class="delegateBlock">
+    <div class="container" >
+        <img src="img/logo.png" alt="logo" class="logo">
+        <form action="completeDelegate.html">
+
+            <div class="form-group">
+                <select class="selectpicker" id="carType" title="نوع السيارة">
+                    <option>toyota</option>
+                    <option>lancer</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <select class="selectpicker" id="carModel" title="مودل السيارة">
+                    <option>2018</option>
+                    <option>2019</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="year" placeholder="سنة الصنع" >
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="palateInfo" placeholder="معلومات لوحة المركبة" >
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="palateChar" placeholder="حروف لوحة المركبة" >
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="palateNumber" placeholder="ارقام لوحة المركبة" >
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control docPhoto" placeholder="صورة رخصة القياده" disabled>
+                <input id="photo-upload" class="uploadFile" name='upload_cont_file' type="file" accept="image/*">
+                <i class="fas fa-camera-retro"></i>
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control docPhoto" placeholder="صورة السيارة من الامام" disabled>
+                <input id="photo-upload2" class="uploadFile" name='upload_cont_file' type="file" accept="image/*">
+                <i class="fas fa-camera-retro"></i>
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control docPhoto" placeholder="صورة السيارة من الخلف" disabled>
+                <input id="photo-upload3" class="uploadFile" name='upload_cont_file' type="file" accept="image/*">
+                <i class="fas fa-camera-retro"></i>
+            </div>
+
+            <div class="form-group">
+                <select class="selectpicker" id="type" title="نوع المركبة">
+                    <option>toyota</option>
+                    <option>lancer</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="area" placeholder="المنطقة التي اعمل بها" >
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="bankAcc" placeholder="رقم الحساب البنكي ( اختياري )" >
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="userAddress" placeholder="عنوان صاحب الحساب" >
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control docPhoto" placeholder="استماره السيارة" disabled>
+                <input id="photo-upload4" class="uploadFile" name='upload_cont_file' type="file" accept="image/*">
+                <i class="fas fa-camera-retro"></i>
+            </div>
+
+            <div class="terms">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1"><a href="#">الموافقة علي الشروط والأحكام</a></label>
+                </div>
+            </div>
+
+            <button type="submit" class="semonBtn">
+                تسجيل
+            </button>
+
+            <a href="#" class="login">دخول</a>
+
+
+        </form>
+    </div>
+</div>
+<!--start form-->
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.min.js"></script>
+<script src="js/scripts.js"></script>
+
+<!--start select-->
+<script>
+    $('.selectpicker').selectpicker();
+</script>
+<!--end select-->
+
+
+</body>
+</html>

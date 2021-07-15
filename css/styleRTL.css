@@ -1,0 +1,45 @@
+body {
+  direction: ltr;
+  text-align: left;
+}
+
+.ml-5 {
+  margin-right: 3rem !important;
+  margin-left: 0 !important;
+}
+
+form .form-group .form-control {
+  text-align: left;
+  padding: 0 25px;
+}
+form .form-group .locImg, form .form-group .fa-camera-retro {
+  right: 15px;
+  left: auto;
+}
+form .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .filter-option, form .bootstrap-select > .dropdown-toggle .filter-option {
+  text-align: left;
+}
+form .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu li a, form .bootstrap-select > .dropdown-toggle .dropdown-menu li a {
+  text-align: left;
+}
+
+.custom-radio, .custom-checkbox {
+  padding-left: 1.5rem;
+  padding-right: 0;
+}
+
+.modal .modal-dialog .modal-content .modal-header .closeModal {
+  right: 24px;
+  left: auto;
+}
+
+@media (max-width: 767px) {
+  form .form-group .form-control {
+    padding: 0 27px 0 10px;
+  }
+  form .form-group .locImg, form .form-group .fa-camera-retro {
+    right: 10px;
+  }
+}
+
+/*# sourceMappingURL=styleRTL.css.map */

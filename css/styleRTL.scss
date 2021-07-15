@@ -1,0 +1,95 @@
+$lightGray: #a7a7a7;
+$gray: #535455;
+$midGray: #7e8082;
+$black: #2D2D2D;
+$orange: #FCA003;
+$bgGray: #e4e4e4;
+
+body {
+  direction: ltr;
+  text-align: left;
+}
+
+.ml-5{
+  margin-right: 3rem!important;
+  margin-left: 0!important;
+}
+
+
+form {
+  .form-group {
+    .form-control {
+      text-align: left;
+      padding: 0 25px;
+    }
+
+    .locImg , .fa-camera-retro{
+      right: 15px;
+      left: auto;
+    }
+
+  }
+
+  .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn), .bootstrap-select > .dropdown-toggle {
+
+
+    .filter-option {
+      text-align: left;
+    }
+
+    .dropdown-menu li a {
+      text-align: left;
+    }
+
+  }
+
+}
+
+.custom-radio, .custom-checkbox {
+  padding-left: 1.5rem;
+  padding-right: 0;
+}
+
+.modal {
+  .modal-dialog {
+    .modal-content {
+      .modal-header {
+        .closeModal {
+          right: 24px;
+          left: auto;
+        }
+      }
+
+    }
+  }
+}
+
+
+@media(max-width: 767px) {
+
+  form {
+    .form-group {
+      .form-control {
+        padding: 0 27px 0 10px;
+      }
+
+      .locImg  , .fa-camera-retro{
+        right: 10px;
+      }
+
+    }
+
+  }
+
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media(min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media(min-width: 1200px){
+}
